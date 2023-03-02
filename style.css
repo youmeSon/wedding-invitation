@@ -2,6 +2,10 @@ body {
   background-color: #faebd7;
 }
 
+.container-fluid {
+    overflow-x: hidden;
+}
+
 h1 {
   font-family: "Sacramento", cursive;
   font-size: 40px;
@@ -17,4 +21,16 @@ h1 {
   background-color: #edba77;
   color: #fff;
   border: none;
+}
+
+.map-icon {
+    height: 50px;
+    width: 50px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    opacity: 0.5
+}
+
+.map-icon.selected {
+    opacity: 1;
 }
