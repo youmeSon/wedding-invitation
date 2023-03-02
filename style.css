@@ -1,6 +1,6 @@
-body {
+/* body {
   background-color: #faebd7;
-}
+} */
 
 .container-fluid {
     overflow-x: hidden;
@@ -21,6 +21,10 @@ h1 {
   background-color: #edba77;
   color: #fff;
   border: none;
+}
+
+.map-container iframe {
+  border-radius: 20px;
 }
 
 .map-icon {
