@@ -1,9 +1,15 @@
 const titleTextKor = '유미와 닉의 결혼식',
-      titleTextEn = 'Youme and Nick\'s Wedding'; 
+      titleTextEn = 'Youme and Nick\'s Wedding',
+      sakura = new Sakura('body', { delay: 100 }),
+      msPerDay = 86400000,
+      timeRemaining = Math.round((new Date('04-23-2023') - new Date()) / msPerDay),
+      timeRemainingEl = document.getElementById('timeRemaining');
 
 let currentLanguage = 'kor';
 
-const sakura = new Sakura('body', { delay: 100 });
+timeRemainingEl.dataset.en = `(${timeRemaining} days left!)`;
+timeRemainingEl.dataset.kor = `(${timeRemaining}개일 남았습니다!)`;
+timeRemainingEl.innerText = `(${timeRemaining}일 남았습니다!)`;
 
 changeLanguage = () => {
     if (currentLanguage == 'en') {
