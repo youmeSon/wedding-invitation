@@ -8,7 +8,7 @@ const titleTextKor = '유미와 닉의 결혼식',
 let currentLanguage = 'kor';
 
 timeRemainingEl.dataset.en = `(${timeRemaining} days left!)`;
-timeRemainingEl.dataset.kor = `(${timeRemaining}개일 남았습니다!)`;
+timeRemainingEl.dataset.kor = `(${timeRemaining}일 남았습니다!)`;
 timeRemainingEl.innerText = `(${timeRemaining}일 남았습니다!)`;
 
 changeLanguage = () => {
