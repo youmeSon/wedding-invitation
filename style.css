@@ -1,6 +1,9 @@
 body {
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/rice-paper.png");
+  font-family: "Dancing Script", "Nanum Brush Script", cursive;
+  /* font-family: "Nanum Brush Script", cursive; */
+  /* font-family: "Water Brush", cursive; */
 }
 
 .container-fluid {
@@ -8,7 +11,7 @@ body {
 }
 
 h1 {
-  font-family: "Sacramento", cursive;
+  /* font-family: "Sacramento", cursive; */
   font-size: 40px;
 }
 
