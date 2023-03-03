@@ -51,3 +51,12 @@ h2 {
 .footer-floral {
   opacity: 0.7;
 }
+
+.mobile {
+  text-decoration: none;
+  color: black;
+}
+
+#bank-account.hide {
+  display: none;
+}
