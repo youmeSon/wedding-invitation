@@ -1,9 +1,10 @@
-/* body {
-  background-color: #faebd7;
-} */
+body {
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/rice-paper.png");
+}
 
 .container-fluid {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -28,13 +29,13 @@ h1 {
 }
 
 .map-icon {
-    height: 50px;
-    width: 50px;
-    border: 2px solid gray;
-    border-radius: 5px;
-    opacity: 0.5
+  height: 50px;
+  width: 50px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  opacity: 0.5;
 }
 
 .map-icon.selected {
-    opacity: 1;
+  opacity: 1;
 }
