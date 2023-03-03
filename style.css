@@ -12,6 +12,9 @@ body {
 
 h1 {
   /* font-family: "Sacramento", cursive; */
+  font-size: 60px;
+}
+h2 {
   font-size: 40px;
 }
 
