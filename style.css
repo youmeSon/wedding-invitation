@@ -43,10 +43,6 @@ div, section {
   border: none;
 }
 
-#gallery {
-  height: 550px;
-}
-
 .map-container iframe {
   border-radius: 20px;
 }
