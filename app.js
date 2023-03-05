@@ -1,6 +1,6 @@
 const titleTextKor = "유미와 닉의 결혼식",
   titleTextEn = "Youme and Nick's Wedding",
-  // sakura = new Sakura("body"),
+  sakura = new Sakura("body"),
   msPerDay = 86400000,
   timeRemaining = Math.round((new Date("04-23-2023") - new Date()) / msPerDay),
   timeRemainingEl = document.getElementById("timeRemaining"),
