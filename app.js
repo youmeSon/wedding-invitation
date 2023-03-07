@@ -95,7 +95,7 @@ changeLanguage = () => {
 copy = e => {
   const originalText = e.innerText;
   navigator.clipboard.writeText(e.dataset.accountno);
-  e.innerText = '복사 됬습니다!';
+  e.innerText = '복사 됐습니다!';
   setTimeout(() => {
     e.innerText = originalText;
   }, copyMessageTimeoutLength);
