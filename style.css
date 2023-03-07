@@ -28,6 +28,20 @@ p {
   font-size: 25px;
 }
 
+/* color */
+.light-purple {
+  color: rgba(22, 9, 93, 0.523);;
+}
+
+.wedding-venue {
+  text-decoration: none;
+  color: rgba(43, 42, 46, 0.818);;;
+}
+
+.light-grey {
+  color: rgb(133, 138, 144);
+}
+
 div, section {
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 1s; /* Firefox < 16 */
@@ -123,15 +137,3 @@ div, section {
   justify-content: space-around;
 }
 
-.light-purple {
-  color: rgba(22, 9, 93, 0.523);;
-}
-
-.wedding-venue {
-  text-decoration: none;
-  color: rgba(43, 42, 46, 0.818);;;
-}
-
-.light-grey {
-  color: rgb(133, 138, 144);
-}
