@@ -1,23 +1,51 @@
 const titleTextKor = "유미와 닉의 결혼식",
   titleTextEn = "Youme and Nick's Wedding",
-  sakura = new Sakura("body"),
   msPerDay = 86400000,
   timeRemaining = Math.round((new Date("04-23-2023") - new Date()) / msPerDay),
   timeRemainingEl = document.getElementById("timeRemaining"),
   copyMessageTimeoutLength = 1500,
   scrollIntoViewThreshold = 0.9; //Element scrolls into view when 10% of it is above the bottom of the viewport
 
+// Sakura 
+let sakura = new Sakura('body', {
+  colors: [
+      {
+          gradientColorStart: 'rgba(255, 183, 197, 0.9)',
+          gradientColorEnd: 'rgba(255, 197, 208, 0.9)',
+          gradientColorDegree: 120,
+      },
+      {
+          gradientColorStart: 'rgba(255,189,189)',
+          gradientColorEnd: 'rgba(227,170,181)',
+          gradientColorDegree: 120,
+      },
+      {
+          gradientColorStart: 'rgba(212,152,163)',
+          gradientColorEnd: 'rgba(242,185,196)',
+          gradientColorDegree: 120,
+      },
+  ],
+  delay: 200,
+  fallSpeed: 2,
+
+});
 let currentLanguage = "kor",
     bankAccount = document.querySelector("#bank-account");
 
-timeRemainingEl.dataset.en = `(${timeRemaining} days left!)`;
-timeRemainingEl.dataset.kor = `(${timeRemaining}일 남았습니다!)`;
-timeRemainingEl.innerText = `( ${timeRemaining}일 남았습니다! )`;
+timeRemainingEl.dataset.en = `👰${timeRemaining} days left🤵`;
+timeRemainingEl.dataset.kor = `👰${timeRemaining}일 남았습니다🤵`;
+timeRemainingEl.innerText = `👰${timeRemaining}일 남았습니다🤵`;
 
 //Slick slider
 
 $('#journeyCarousel').slick({
-  autoplay: true
+  autoplay: true,
+  autoplaySpeed: 3000,
+  fade: true,
+  infinite: true,
+  lazyLoad: "ondemand",
+  slidesToShow: 1,
+  cssEase: 'linear'
 });
 
 //Scroll elements into view
@@ -31,7 +59,7 @@ function fadeElementsIntoView () {
     if (isInViewport(element)) {
       setTimeout(() => {
         element.classList.remove('scroll-into-view');
-      }, 1000);
+      }, 500);
     }
   });
 }
@@ -67,7 +95,7 @@ changeLanguage = () => {
 copy = e => {
   const originalText = e.innerText;
   navigator.clipboard.writeText(e.dataset.accountno);
-  e.innerText = '복사 됬습니다!';
+  e.innerText = '복사 됐습니다!';
   setTimeout(() => {
     e.innerText = originalText;
   }, copyMessageTimeoutLength);
@@ -82,3 +110,45 @@ if (language !== null) {
   currentLanguage = language == 'en' ? 'kor' : 'en';
   changeLanguage();
 }
+
+// time countdown 
+
+  // Set the date we're counting down to
+  const countDownDate = new Date("April 23, 2023 15:00:00").getTime();
+
+  // Dom Elements to Update
+  const saleStrip = document.getElementById('saleStrip');
+  const saleStripTitle = document.getElementById('saleStripTitle');
+  const saleDays = document.getElementById('saleDays');
+  const saleHours = document.getElementById('saleHours');
+  const saleMins = document.getElementById('salMins');
+  const saleSecs = document.getElementById('saleSecs');
+
+  // Update the count down every 1 second
+  const x = setInterval(function () {
+
+    // Get today's date and time
+    const now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //   if (distance < 0) { clearInterval(x); saleStripTitle.textContent = "Sale Started"; }
+    if (distance < 0) {
+      clearInterval(x);
+      saleStrip.classList.add('d-none');
+    }
+
+    saleDays.textContent = days;
+    saleHours.textContent = hours;
+    saleMins.textContent = minutes;
+    saleSecs.textContent = seconds;
+
+  }, 1000);
+

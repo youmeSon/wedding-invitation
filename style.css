@@ -1,7 +1,7 @@
 body {
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/rice-paper.png");
-  font-family: "Dancing Script", "Nanum Brush Script", cursive;
+  font-family: "Dancing Script", "East Sea Dokdo", cursive;
   /* font-family: "Nanum Brush Script", cursive; */
   /* font-family: "Water Brush", cursive; */
 }
@@ -20,6 +20,27 @@ h1 {
 h2 {
   font-size: 40px;
 }
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 25px;
+}
+
+/* color */
+.light-purple {
+  color: rgba(22, 9, 93, 0.523);;
+}
+
+.wedding-venue {
+  text-decoration: none;
+  color: rgba(43, 42, 46, 0.818);;;
+}
+
+.light-grey {
+  color: rgb(133, 138, 144);
+}
 
 div, section {
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
@@ -30,6 +51,9 @@ div, section {
   transition: 1s linear all;
 }
 
+.korean-font {
+  font-family: "East Sea Dokdo";
+}
 /* btn */
 .btn-language {
   display: inline-block;
@@ -46,6 +70,7 @@ div, section {
 .map-container iframe {
   border-radius: 20px;
 }
+
 
 .map-icon {
   height: 50px;
@@ -105,3 +130,10 @@ div, section {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+/* time boxes */
+.count-down {
+  display: flex;
+  justify-content: space-around;
+}
+
