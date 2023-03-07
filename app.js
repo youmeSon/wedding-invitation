@@ -59,7 +59,7 @@ function fadeElementsIntoView () {
     if (isInViewport(element)) {
       setTimeout(() => {
         element.classList.remove('scroll-into-view');
-      }, 1000);
+      }, 500);
     }
   });
 }

@@ -20,6 +20,9 @@ h1 {
 h2 {
   font-size: 40px;
 }
+h3 {
+  font-size: 30px;
+}
 
 div, section {
   -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
