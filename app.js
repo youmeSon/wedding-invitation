@@ -32,9 +32,9 @@ let sakura = new Sakura('body', {
 let currentLanguage = "kor",
     bankAccount = document.querySelector("#bank-account");
 
-timeRemainingEl.dataset.en = `(${timeRemaining} days left!)`;
-timeRemainingEl.dataset.kor = `(${timeRemaining}일 남았습니다!)`;
-timeRemainingEl.innerText = `( ${timeRemaining}일 남았습니다! )`;
+timeRemainingEl.dataset.en = `👰${timeRemaining} days left🤵`;
+timeRemainingEl.dataset.kor = `👰${timeRemaining}일 남았습니다🤵`;
+timeRemainingEl.innerText = `👰${timeRemaining}일 남았습니다🤵`;
 
 //Slick slider
 
@@ -110,3 +110,45 @@ if (language !== null) {
   currentLanguage = language == 'en' ? 'kor' : 'en';
   changeLanguage();
 }
+
+// time countdown 
+
+  // Set the date we're counting down to
+  const countDownDate = new Date("April 23, 2023 15:00:00").getTime();
+
+  // Dom Elements to Update
+  const saleStrip = document.getElementById('saleStrip');
+  const saleStripTitle = document.getElementById('saleStripTitle');
+  const saleDays = document.getElementById('saleDays');
+  const saleHours = document.getElementById('saleHours');
+  const saleMins = document.getElementById('salMins');
+  const saleSecs = document.getElementById('saleSecs');
+
+  // Update the count down every 1 second
+  const x = setInterval(function () {
+
+    // Get today's date and time
+    const now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    const distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    //   if (distance < 0) { clearInterval(x); saleStripTitle.textContent = "Sale Started"; }
+    if (distance < 0) {
+      clearInterval(x);
+      saleStrip.classList.add('d-none');
+    }
+
+    saleDays.textContent = days;
+    saleHours.textContent = hours;
+    saleMins.textContent = minutes;
+    saleSecs.textContent = seconds;
+
+  }, 1000);
+

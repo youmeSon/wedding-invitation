@@ -22,10 +22,17 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=East+Sea+Dokdo&family=Nanum+Brush+Script&family=Water+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nanum+Brush+Script&family=Water+Brush&display=swap"
-      rel="stylesheet"
-    />
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+    crossorigin="anonymous"
+  />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
   <body>
     <div class="container-fluid">
@@ -265,67 +272,41 @@
           <div class="col-12 my-2">
             <img class="w-100" src="wedding-hall.jpg" alt="Wedding Hall" />
           </div>
-          <div class="col-12 text-center">
-            <h2
-              class="text-element d-inline mt-2"
+          <div class="col-12 text-center mb-3">
+            <a href="http://www.j-ostiel.co.kr/home/info/230" class="wedding-venue"><h2
+              class="text-element d-inline mt-2 "
               data-en="J-Ostiel"
               data-kor="제이오스티엘"
             >
-              제이오스티엘
-            </h2>
-            <a
-              href="http://www.j-ostiel.co.kr/home/info/230"
-              target="_blank"
-              class="d-inline"
-            >
-              <svg
-                class="mb-3 ms-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20px"
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <g clip-path="url(#clip0_429_11072)">
-                  <path
-                    d="M11 3.99994H4V17.9999C4 19.1045 4.89543 19.9999 6 19.9999H18C19.1046 19.9999 20 19.1045 20 17.9999V12.9999"
-                    stroke="#292929"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M9 14.9999L20 3.99994"
-                    stroke="#292929"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15 3.99994H20V8.99994"
-                    stroke="#292929"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_429_11072">
-                    <rect width="24" height="24" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+              ▪ 제이오스티엘 ▪
+            </h2></a>
+           
             </a>
           </div>
-          <div class="col-12 text-center">
-            <h3 class="text-element" data-en="23rd April" data-kor="4월 23일">
-              4월 23일
+          <div class="col-12 text-center mb-3 korean-font">
+            <h3 class="text-element" data-en="23rd April - 3pm" data-kor="4월 23일 - 오후 3시">
+              4월 23일 - 오후 3시
             </h3>
           </div>
-          <div class="col-12 text-center">
-            <h4 class="text-element" data-en="3pm" data-kor="오후 3시">
-              오후 3시
-            </h4>
+
+
+        </div>
+        <div>
+          <div class="count-down flex-c mx-0 mx-xxl-0">
+            <div class="count-down_each  mx-6 mx-xxl-7 mb-0">
+              <span class="text-element h3 mb-0 light-purple" id="saleDays" data-en="days" data-kor="일"></span>
+              일
+            </div>
+            <div class="count-down_each  mx-6 mx-xxl-7 mb-0">
+              <span class="text-element h3 mb-0 light-purple" id="saleHours" data-en="hours" data-kor="시"></span>
+              시
+              </div>
+            <div class="count-down_each  mx-6 mx-xxl-7 mb-0">
+              <span class="text-element h3 mb-0 light-purple" id="salMins" data-en="minutes" data-kor="분"></span>
+              분</div>
+            <div class="count-down_each  mx-6 mx-xxl-7 mb-4">
+              <span class="text-element h3 mb-3 light-purple" id="saleSecs" data-en="seconds" data-kor="초"></span>
+              초</div>
           </div>
           <div class="col-12 text-center">
             <h4 class="text-element" id="timeRemaining"></h4>
@@ -393,27 +374,15 @@
           <div class="col-12">
             <!-- <h3 class="text-element mt-5" data-en="Bride side" data-kor="신부측">신부측 👰</h3> -->
             <a href="tel:+82102311107" class="mobile">
-              <h3 class="text-element text-info" data-en="Hyunki Son - +82 10-231-1107 " data-kor="손현기 - 010-231-1107">
+              <h3 class="text-element text-info korean-font" data-en="Hyunki Son - +82 10-231-1107 " data-kor="손현기 - 010-231-1107">
               손현기 : 010-231-1107
               </h3>
             </a>
             <a href="tel:+821089141107" class="mobile">
-              <h3 class="text-element text-info" data-en="Kumok Lim - +82 10-8914-1107 " data-kor="임금옥 - 010-8914-1107">
+              <h3 class="text-element text-info korean-font" data-en="Kumok Lim - +82 10-8914-1107 " data-kor="임금옥 - 010-8914-1107">
                 임금옥 : 010-8914-1107
               </h3>
             </a>
-
-            <!-- <h3 class="text-element mt-5" data-en="Bride side" data-kor="신부측">신랑측 🤵</h3>
-            <a href="tel:0102311107" class="mobile">
-              <h3 class="text-element " data-en="Mark - 010-231-1107 " data-kor="마크 - 010-231-1107">
-              마크 : 010-231-1107
-              </h3>
-            </a>
-            <a href="tel:01089141107" class="mobile">
-              <h3 class="text-element " data-en="Kerry : 010-8914-1107 " data-kor="케리 : 010-8914-1107">
-                케리 : 010-8914-1107
-              </h3>
-            </a> -->
           </div>
       </section>
       <div class="row my-4 px-2 scroll-into-view">
@@ -436,7 +405,7 @@
               <h3 class="mt-3">손현기</h3>
               <p>
                 <strong>하나은행  </strong>
-                <small class="account-no">171-910165-89507</small>
+                <small class="account-no korean-font">171-910165-89507</small>
               </p>
               <button data-accountno="171-910165-89507" onclick="copy(this)" >계좌 번호 복사</button>
             </div>
@@ -444,7 +413,7 @@
               <h3 class="mt-3">임금옥</h3>
               <p>
                 <strong>하나은행  </strong>
-                <small class="account-no">141-910035-03207</small>
+                <small class="account-no korean-font">141-910035-03207</small>
               </p>
               <button data-accountno="141-910035-03207" onclick="copy(this)">계좌 번호 복사</button>
             </div>
