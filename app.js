@@ -32,7 +32,7 @@ let sakura = new Sakura('body', {
 let currentLanguage = "kor",
     bankAccount = document.querySelector("#bank-account");
 
-timeRemainingEl.dataset.en = `👰${timeRemaining} days left🤵`;
+timeRemainingEl.dataset.en = `...left!`;
 timeRemainingEl.dataset.kor = `👰${timeRemaining}일 남았습니다🤵`;
 timeRemainingEl.innerText = `👰${timeRemaining}일 남았습니다🤵`;
 
@@ -40,7 +40,7 @@ timeRemainingEl.innerText = `👰${timeRemaining}일 남았습니다🤵`;
 
 $('#journeyCarousel').slick({
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 2000,
   fade: true,
   infinite: true,
   lazyLoad: "ondemand",
@@ -145,10 +145,10 @@ if (language !== null) {
       saleStrip.classList.add('d-none');
     }
 
-    saleDays.textContent = days;
-    saleHours.textContent = hours;
-    saleMins.textContent = minutes;
-    saleSecs.textContent = seconds;
+    saleDays.textContent = `${days} ${currentLanguage == 'kor' ? saleDays.dataset.kor : saleDays.dataset.en}`;
+    saleHours.textContent = `${hours} ${currentLanguage == 'kor' ? saleHours.dataset.kor : saleHours.dataset.en}`;
+    saleMins.textContent = `${minutes} ${currentLanguage == 'kor' ? saleMins.dataset.kor : saleMins.dataset.en}`;
+    saleSecs.textContent = `${seconds} ${currentLanguage == 'kor' ? saleSecs.dataset.kor : saleSecs.dataset.en}`;
 
   }, 1000);
 
