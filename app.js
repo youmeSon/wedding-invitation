@@ -6,6 +6,8 @@ const titleTextKor = "유미와 닉의 결혼식",
   copyMessageTimeoutLength = 1500,
   scrollIntoViewThreshold = 0.9; //Element scrolls into view when 10% of it is above the bottom of the viewport
 
+  let sliderStarted = false;
+
 // Sakura 
 let sakura = new Sakura('body', {
   colors: [
@@ -25,8 +27,8 @@ let sakura = new Sakura('body', {
           gradientColorDegree: 120,
       },
   ],
-  delay: 200,
-  fallSpeed: 2,
+  delay: 100,
+  fallSpeed: 1,
 
 });
 let currentLanguage = "kor",
@@ -35,17 +37,6 @@ let currentLanguage = "kor",
 timeRemainingEl.dataset.en = `...left!`;
 timeRemainingEl.dataset.kor = `👰${timeRemaining}일 남았습니다🤵`;
 timeRemainingEl.innerText = `👰${timeRemaining}일 남았습니다🤵`;
-
-//Slick slider
-
-$('#journeyCarousel').slick({
-  autoplay: true,
-  autoplaySpeed: 2000,
-  fade: true,
-  infinite: true,
-  slidesToShow: 1,
-  cssEase: 'linear'
-});
 
 //Scroll elements into view
 
@@ -56,6 +47,18 @@ function fadeElementsIntoView () {
   if (scrollIntoViewElements.length == 0) document.removeEventListener('scroll', fadeElementsIntoView); //Unbind event once all elements are visible
   scrollIntoViewElements.forEach(element => {
     if (isInViewport(element)) {
+      if (element.id == 'gallery' && !sliderStarted) {
+        console.log('slider init');
+        $('#journeyCarousel').slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          fade: true,
+          infinite: true,
+          slidesToShow: 1,
+          cssEase: 'linear'
+        });
+        sliderStarted = true;
+      }
       setTimeout(() => {
         element.classList.remove('scroll-into-view');
       }, 500);
