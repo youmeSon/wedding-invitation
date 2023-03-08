@@ -95,7 +95,8 @@ div, section {
 }
 
 #bank-account input {
-  width: 0;
+  position: absolute;
+  left: -1000px;
   opacity: 0;
   padding: 0;
 }
