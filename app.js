@@ -95,7 +95,9 @@ copy = e => {
   const originalText = e.innerText,
         inputElement = $(e).siblings('input');
   inputElement[0].select();
-  document.execCommand('copy');
+  setTimeout(() => {
+    document.execCommand('copy');
+  }, 100);
   e.innerText = '복사 됐습니다!';
   setTimeout(() => {
     e.innerText = originalText;
