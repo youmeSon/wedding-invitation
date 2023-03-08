@@ -92,8 +92,10 @@ changeLanguage = () => {
 };
 
 copy = e => {
-  const originalText = e.innerText;
-  navigator.clipboard.writeText(e.dataset.accountno);
+  const originalText = e.innerText,
+        inputElement = $(e).siblings('input');
+  inputElement[0].select();
+  document.execCommand('copy');
   e.innerText = '복사 됐습니다!';
   setTimeout(() => {
     e.innerText = originalText;
