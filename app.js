@@ -48,14 +48,10 @@ function fadeElementsIntoView () {
   scrollIntoViewElements.forEach(element => {
     if (isInViewport(element)) {
       if (element.id == 'gallery' && !sliderStarted) {
-        console.log('slider init');
         $('#journeyCarousel').slick({
           autoplay: true,
-          autoplaySpeed: 2000,
           fade: true,
-          infinite: true,
-          slidesToShow: 1,
-          cssEase: 'linear'
+          cssEase: 'linear',
         });
         sliderStarted = true;
       }
