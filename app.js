@@ -43,7 +43,6 @@ $('#journeyCarousel').slick({
   autoplaySpeed: 2000,
   fade: true,
   infinite: true,
-  lazyLoad: "ondemand",
   slidesToShow: 1,
   cssEase: 'linear'
 });
